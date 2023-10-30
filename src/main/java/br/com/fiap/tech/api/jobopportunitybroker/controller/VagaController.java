@@ -21,12 +21,6 @@ public class VagaController {
         return ResponseEntity.ok(vagaService.listarVagas());
     }
 
-//    @GetMapping
-//    public ResponseEntity<Page<VagaDTO>> findAll(@PageableDefault(size = 10, page = 0, sort = "nome") Pageable pageable) {
-//        Page<VagaDTO> vagas = vagaService.listarVagas(pageable);
-//        return ResponseEntity.ok(vagas);
-//    }
-
     @PostMapping
     public Vaga criarVaga(@RequestBody Vaga vaga) {
         return vagaService.criarVaga(vaga);
